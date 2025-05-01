@@ -161,7 +161,7 @@ def main():
             
             st.header("Upload Documents")
             uploaded_files = st.file_uploader(
-                "Upload your documents",
+                "Upload your documents (.pdf, .docx, .txt)",
                 type=["txt", "pdf", "docx"],
                 accept_multiple_files=True,
             )
