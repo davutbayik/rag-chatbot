@@ -145,8 +145,7 @@ def main():
         llm_model = st.selectbox(
             "Select LLM Model", 
             options=LLM_MODELS,
-            index=None,
-            key="llm_model"
+            index=None
             )
         
     if llm_model:
