@@ -58,7 +58,6 @@ def get_chat_download_link():
     
     # Convert messages to a simpler format for download
     chat_history = []
-    ind_chat, ind_ai = 0, 0
     
     for i, message in enumerate(st.session_state.messages):
         # Get timestamp for this message

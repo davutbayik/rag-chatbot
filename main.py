@@ -14,6 +14,9 @@ from ui_components import setup_chat_styling, get_chat_download_link
 # Suppress warnings
 warnings.filterwarnings("ignore")
 
+os.environ["OPENAI_API_KEY"] = ""
+os.environ["GOOGLE_API_KEY"] = ""
+
 LLM_MODELS = ["gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano", "gpt-4o-mini", "gpt-3.5-turbo", 
               "gemini-2.5-flash-preview-04-17", "gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-1.5-pro"]
 
@@ -170,7 +173,7 @@ def main():
         # Process documents when button is clicked
         if process_button and uploaded_files:
             with st.spinner("Processing documents..."):
-                process_documents(uploaded_files)
+                process_documents(uploaded_files, llm_model)
         
         # Display chat interface if files have been uploaded
         if uploaded_files:

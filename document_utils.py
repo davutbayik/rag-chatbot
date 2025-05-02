@@ -5,7 +5,7 @@ import os
 import tempfile
 import streamlit as st
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 from langchain_community.document_loaders import (
     TextLoader,
     PyPDFLoader,
@@ -23,7 +23,7 @@ CHUNK_OVERLAP = 200
 TEMPERATURE = 0
 TOP_K_DOCUMENTS = 5
 
-def process_documents(files):
+def process_documents(files, llm_model):
     """
     Process uploaded documents and create a vector store.
     
@@ -62,12 +62,15 @@ def process_documents(files):
         
         # Create embeddings and vector store
         try:
-            embeddings = OpenAIEmbeddings()
+            if "gemini" in llm_model:
+                embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+            else:
+                embeddings = OpenAIEmbeddings()
             st.session_state.vectorstore = FAISS.from_documents(chunks, embeddings)
         except Exception as e:
             st.sidebar.error(f"🚫 Error creating embeddings: {str(e)}")
             if "AuthenticationError" in str(e):
-                st.sidebar.warning("⚠️ Please check your OpenAI API key.")
+                st.sidebar.warning("⚠️ Please check your API key.")
                 
     finally:
         # Clean up temporary files
