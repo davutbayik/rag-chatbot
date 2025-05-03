@@ -80,7 +80,7 @@ GOOGLE_API_KEY=your_google_api_key
 ## 📂 Project Structure
 
 ```
-├── app.py               # Main Streamlit application
+├── main.py               # Main Streamlit application
 ├── document_utils.py    # Document processing and RAG functionality
 ├── ui_components.py     # UI styling and helper components
 ├── requirements.txt     # Python dependencies
