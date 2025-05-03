@@ -1,6 +1,6 @@
 # 📄🔍 RAG Chatbot
 
-A Retrieval-Augmented Generation (RAG) chatbot with a custom Streamlit interface that allows users to upload documents and ask questions about their content.
+A Retrieval-Augmented Generation (RAG) chatbot with a custom Whatsapp style Streamlit interface that allows users to upload documents and ask questions about their content.
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Built%20with-Streamlit-ff4b4b.svg)
