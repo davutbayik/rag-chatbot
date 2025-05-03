@@ -179,7 +179,7 @@ def main():
         if uploaded_files:
             # Inform the user that the input files are processed and passed to vectorstore
             if st.session_state.vectorstore:
-                st.sidebar.success(f"✅ Successfully processed documents !")
+                st.sidebar.success(f"✅ Successfully processed documents!")
                 
             # Display chat history
             chat_container = st.container()
