@@ -20,6 +20,7 @@ def setup_chat_styling():
         /* Message container styling */
         .user-bubble {
             background-color: #DCF8C6;
+            color: black;
             padding: 12px;
             border-radius: 15px 15px 0 15px;
             margin: 10px 10px 10px auto;
@@ -30,6 +31,7 @@ def setup_chat_styling():
         }
         .assistant-bubble {
             background-color: #F2F2F2;
+            color: black;
             padding: 12px;
             border-radius: 15px 15px 15px 0;
             margin: 10px auto 10px 10px;
