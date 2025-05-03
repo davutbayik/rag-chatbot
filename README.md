@@ -19,7 +19,7 @@ A Retrieval-Augmented Generation (RAG) chatbot with a custom Streamlit interface
 
 ## 🖥️ Live App
 
-👉 [Try Live App](https://rag-custom-chatbot.streamlit.app)
+👉 [Live App](https://rag-custom-chatbot.streamlit.app)
 
 ## 🧩 Tech Stack
 
