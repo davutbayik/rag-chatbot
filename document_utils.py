@@ -148,11 +148,9 @@ def generate_response(user_query, llm_model, chat_history_text):
     
     # Set up prompt template
     prompt = ChatPromptTemplate.from_template("""
-    Answer the question based only on the following context:
-    {context}
+    Answer the question based only on the following context: {context}
     
-    Previous conversation:
-    {chat_history}
+    Use previous conversation for follow-up questions: {chat_history}
     
     Question: {input}
     
